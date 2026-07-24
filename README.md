@@ -1,6 +1,7 @@
 # Panel Player
 
-A media player controller plugin for XFCE4 Panel using playerctl.
+I cant find a genuine playerctl plugin for xfce panel, so I made one. You can do whatever you want with it.
+At default its only working horizontally, in the "panelplayer-plugin.c" you can change that to vertical.
 
 ## Features
 
@@ -8,7 +9,6 @@ A media player controller plugin for XFCE4 Panel using playerctl.
 - **Progress Bar**: Visual playback progress with time display
 - **Transport Controls**: Play/Pause, Next, Previous buttons
 - **Multi-Player Support**: Automatically detects active MPRIS players
-- **Auto-Update**: Real-time updates as tracks change
 
 ## Dependencies
 
@@ -41,6 +41,12 @@ make
 sudo make install
 ```
 
+If it won't show up at the item after the build then just add it to the panel plugin directories.
+```bash
+/usr/local/lib/xfce4/panel/plugins/libpanelplayer.so
+/usr/local/share/xfce4/panel/plugins/panelplayer.desktop
+/usr/local/share/icons/hicolor/scalable/apps/playerctl.svg
+```
 ## Usage
 
 1. Build and install the plugin
@@ -52,22 +58,6 @@ sudo make install
 ## Supported Players
 
 Any player that implements the MPRIS D-Bus interface, including:
-- Spotify
-- VLC
-- mpv (with mpris plugin)
-- Firefox/Chrome (for web audio)
-- Rhythmbox
-- Clementine
-- And many more...
 
-## License
 
-GPL-3.0-or-later
 
-## Development
-
-The plugin consists of:
-
-- `src/panelplayer-plugin.c` - Main plugin implementation
-- `src/panelplayer-player.c` - Playerctl wrapper
-- `panel-plugin/panelplayer.desktop.in` - Plugin registration
