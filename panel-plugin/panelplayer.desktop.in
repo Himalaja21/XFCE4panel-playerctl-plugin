@@ -1,0 +1,8 @@
+[Xfce Panel]
+Type=X-XFCE-PanelPlugin
+Name=Playerctl
+Comment=Control media players via MPRIS
+Icon=panelplayer
+X-XFCE-Module=panelplayer
+X-XFCE-Internal=FALSE
+X-XFCE-API=2.0
