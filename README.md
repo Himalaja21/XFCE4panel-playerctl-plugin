@@ -57,7 +57,7 @@ If it won't show up at the item after the build then just add it to the panel pl
 
 ## Supported Players
 
-Any player that implements the MPRIS D-Bus interface, including:
+Any player that implements the MPRIS D-Bus interface
 
 
 
