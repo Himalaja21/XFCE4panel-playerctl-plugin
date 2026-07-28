@@ -284,10 +284,6 @@ panelplayer_plugin_construct (XfcePanelPlugin *plugin)
       g_signal_connect (pp->manager, "name-vanished",
                         G_CALLBACK (on_name_vanished), pp);
 
-      /* Connect to already-running players */
-      g_signal_connect (pp->manager, "player-added",
-                        G_CALLBACK (on_name_appeared), pp);
-
       /* Connect to already-running players via player-names property */
       GList *player_names = NULL;
       g_object_get (G_OBJECT (pp->manager), "player-names", &player_names, NULL);
